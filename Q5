@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main() {
+    char str[100];
+    char *ptr = str;
+    int L = 0;
+
+    printf("Enter a string: ");
+    fgets(str,sizeof(str),stdin);
+     while (*ptr != '\0') {
+        L++;
+        ptr++;
+    }
+
+    if (str[L - 1] == '\n') {
+        L--;
+    }
+
+    printf("Length of the string: %d\n",L);
+    return 0;
+}
